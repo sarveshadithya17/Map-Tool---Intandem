@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    overflow: hidden;
+}
+
+#map {
+    height: 100%;
+    width: 75%;
+}
+
+#sidebar {
+    width: 25%;
+    background-color: #f7f7f7;
+    padding: 1rem;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sidebar h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+#popup-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 1000;
+    width: 300px;
+}
+
+#popup-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#popup-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#popup-form button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    margin-right: 0.5rem;
+}
+
+#popup-form button#cancel-pin {
+    background-color: #6c757d;
+}
+
+#pin-list {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+#pin-list li {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #e9ecef;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+#pin-list li:hover {
+    background-color: #ced4da;
+}
+.pin-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9ecef;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pin-item:hover {
+    background-color: #ced4da;
+}
+
+.delete-pin {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.delete-pin:hover {
+    background-color: #c82333;
+}
+
